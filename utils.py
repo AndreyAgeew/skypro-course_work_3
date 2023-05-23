@@ -3,7 +3,7 @@ from typing import Any
 import json
 
 
-def open_file_in_zip(file_zip: Any)->list[dict]:
+def open_file_in_zip(file_zip: Any) -> list[dict]:
     """
     Функция открывать zip файл, находит json и загружает из объекты
     :param file_zip: зип файл где хранится файл с операцями
@@ -16,5 +16,6 @@ def open_file_in_zip(file_zip: Any)->list[dict]:
                     return json.load(f)
 
 
-def date_reversed(date):
+def date_reversed(date: str) -> str:
+    """Функция инвертирует строку даты из формата «ГГГГ-ММ-ДД» в «ДД.ММ.ГГГГ»."""
     return ".".join(date.split("T")[0].split("-")[::-1])
