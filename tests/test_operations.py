@@ -81,3 +81,11 @@ def operations_instance():
 
     ]
     return Operations(all_operations)
+
+
+def test_operations_output_last_operations(operations_instance, capsys):
+    operations_instance.output_last_operations()
+    captured = capsys.readouterr()
+    assert 'Операция: 2' in captured.out
+    assert '01.01.2022 Operation 6' in captured.out
+    assert 'Операция: 3' not in captured.out
