@@ -15,3 +15,8 @@ class Operations:
         if type(value) != list or type(value[0]) != dict:
             raise TypeError
         self.__all_operations = value
+
+    def __set_last_operations(self):
+        operations = filter(lambda item: item.get("date"), self.all_operations)
+        operations = sorted(operations, key=lambda item: item["date"])[:-6:-1]
+        return operations
