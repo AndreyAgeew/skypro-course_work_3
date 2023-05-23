@@ -9,3 +9,6 @@ def open_file_in_zip(file_zip):
                 with myzip.open(item.filename, "r") as f:
                     return json.load(f)
 
+
+def date_reversed(date):
+    return ".".join(date.split("T")[0].split("-")[::-1])
