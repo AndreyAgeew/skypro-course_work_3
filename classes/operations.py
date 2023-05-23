@@ -35,3 +35,22 @@ class Operations:
             return order[:4] + " " + order[4:6] + "**" + " **** " + order[12:16]
         else:
             return "**" + order[len(order) - 4:]
+
+    @staticmethod
+    def __check_from_operation(operation):
+        if operation.get('from') is not None:
+            order_from, order_to = operation['from'].split(), operation['to'].split()
+            order_from[-1], order_to[-1] = Operations.__hide_operation(order_from[-1]), \
+                Operations.__hide_operation(order_to[-1])
+
+            return " ".join(order_from) + " -> " + " ".join(order_to) + '\n'
+        else:
+            return
+
+    def output_last_operations(self):
+        for operation in self.__last_operations:
+            print(f"Операция: {operation['id']}\n"
+                  f"{self.__date_reversed(operation['date'])} {operation['description']}\n"
+                  f"{self.__check_from_operation(operation)}"
+                  f"{operation['operationAmount']['amount']} {operation['operationAmount']['currency']['name']}\n"
+                  f"Статус: {self.__check_state(operation['state'])}\n")
