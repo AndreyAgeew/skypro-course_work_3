@@ -10,7 +10,7 @@
 Для работы проекта требуется установить следующие зависимости:
 
 * Python 3.x<br/>
-* Библиотеки: json, zipfile, pytest<br/>
+* Библиотеки: json, zipfile, pytest, coverage<br/>
 Вы можете установить зависимости, запустив следующую команду:
 ![Снимок экрана от 2023-05-23 19-20-49](https://github.com/AndreyAgeew/skypro-course_work_3/assets/126855549/bd82ff66-dc7b-4425-845e-fa702e979413)
 

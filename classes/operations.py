@@ -38,7 +38,8 @@ class Operations:
 
     def __set_last_operations(self) -> list[dict]:
         """Возвращает последние 5 операций, отсортированных по дате в обратном порядке"""
-        operations = filter(lambda item: item.get("date"), self.all_operations)
+        operations = filter(lambda item: item.get("date") and self.__check_state(item["state"]) == "ВЫПОЛНЕНО",
+                            self.all_operations)
         operations = sorted(operations, key=lambda item: item["date"])[:-6:-1]
         return operations
 
