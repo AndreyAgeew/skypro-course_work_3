@@ -21,6 +21,10 @@ def test_operations_set_last_operations():
     assert operations._Operations__last_operations[1]['id'] == 1
 
 
+def test_date_reversed():
+    assert Operations._Operations__date_reversed('2022-01-01T12:00:00') == "01.01.2022"
+
+
 @pytest.fixture
 def operations_instance():
     all_operations = [
