@@ -34,7 +34,7 @@
 * __hide_operation(order): скрывает конфиденциальную информацию в строке заказа.
 # Тестовые функции:
 
-* test_date_reversed(): проверяет функциональность функции __date_reversed(date).
+* test_date_reversed(): проверяет функциональность метода __date_reversed(date).
 * test_operations_repr(): проверяет функциональность метода __repr__() класса Operations.
 * test_operations_set_last_operations(): проверяет функциональность метода __set_last_operations() класса Operations.
 * test_operations_output_last_operations(): проверяет функциональность метода output_last_operations() класса Operations.
