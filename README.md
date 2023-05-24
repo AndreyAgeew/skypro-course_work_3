@@ -19,13 +19,13 @@
 ## Методы класса:
 
 * __init__(self, all_operations):
-Инициализирует Operationsобъект со списком всех операций.
+Инициализирует Operations объект со списком всех операций.
 * output_last_operations(self): 
 Выводит последние пять операций.
 ## Свойства класса:
 
 * all_operations: свойство, которое возвращает список всех операций.
-## Частные методы:
+## Приватные методы:
 
 * __repr__(self): возвращает строковое представление объекта Operations.
 * __set_last_operations(self): Устанавливает последние пять операций на основе их дат.
@@ -35,6 +35,6 @@
 # Тестовые функции:
 
 * test_date_reversed(): проверяет функциональность функции __date_reversed(date).
-* test_operations_repr(): проверяет функциональность метода __repr__()класса Operations.
-* test_operations_set_last_operations(): проверяет функциональность метода __set_last_operations()класса Operations.
-* test_operations_output_last_operations(): проверяет функциональность метода output_last_operations()класса Operations.
+* test_operations_repr(): проверяет функциональность метода __repr__() класса Operations.
+* test_operations_set_last_operations(): проверяет функциональность метода __set_last_operations() класса Operations.
+* test_operations_output_last_operations(): проверяет функциональность метода output_last_operations() класса Operations.
