@@ -1,15 +1,14 @@
 from zipfile import ZipFile
-from typing import Any
 import json
 
 
-def open_file_in_zip(file_zip: Any) -> list[dict]:
+def open_file_in_zip(path_zip: str) -> list[dict]:
     """
-    Функция открывать zip файл, находит json и загружает из объекты
-    :param file_zip: зип файл где хранится файл с операцями
-    :return: список, состоящий из операций из файла json
+    Открывает файл внутри ZIP-архива и возвращает его содержимое в формате JSON
+    :param path_zip: Путь к ZIP-архиву
+    :return: Содержимое файла в формате JSON
     """
-    with ZipFile(file_zip, "r") as myzip:
+    with ZipFile(path_zip, "r") as myzip:
         for item in myzip.infolist():
             if item.filename.endswith(".json"):
                 with myzip.open(item.filename, "r") as f:
