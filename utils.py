@@ -15,6 +15,3 @@ def open_file_in_zip(path_zip: str) -> list[dict]:
                     return json.load(f)
 
 
-def date_reversed(date: str) -> str:
-    """Функция инвертирует строку даты из формата «ГГГГ-ММ-ДД» в «ДД.ММ.ГГГГ»."""
-    return ".".join(date.split("T")[0].split("-")[::-1])
