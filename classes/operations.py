@@ -83,7 +83,7 @@ class Operations:
 
             return " ".join(order_from) + " -> " + " ".join(order_to) + '\n'
         else:
-            return
+            return ""
 
     def output_last_operations(self):
         """Выводит информацию о последних операциях"""
